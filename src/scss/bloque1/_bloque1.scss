@@ -1,0 +1,153 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.bloque1 {
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-desktop-top.webp');
+    background-size: cover;
+    background-position: left;
+    background-repeat: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    // padding: 0 8rem;
+}
+
+ 
+
+.bloque1Container {
+    // background-color: rgba(255, 0, 0, 0.305);
+    z-index: 30;
+    position: relative;
+    display: flex;
+    height: 42rem;
+    width: v.$width_mobile;
+    
+    @include m.phone_360 {
+        height: 67rem;
+        background-color: purple;
+    }
+    @include m.phone_375 {
+        height: 71rem;
+        // background-color: orange;
+    }
+    @include m.phone_390 {
+        height: 75rem;
+        background-color: yellow;
+    }
+    @include m.phone_400 {
+        height: 68rem;
+        background-color: green;
+    }
+    @include m.phone_420 {
+        height: 70rem;   
+        background-color: gray; 
+    }
+    @include m.phone_428 {
+        height: 84rem;
+        background-color: black;
+    }
+}
+
+.bloque1Left {
+    // background-color: green;
+    // height: auto;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 1.5rem;
+    @include m.phone_360 {
+        row-gap: 2.5rem;
+        @media (max-height: 780px) {
+            row-gap: 3.5rem;
+            // background-color: red;
+        } 
+        @media (max-height: 800px) {
+            // row-gap: 5rem;
+            // background-color: green;
+        } 
+    }
+    .bloque1LeftCayetano {
+        position: absolute;
+        bottom: -10rem;
+        width: 50rem;
+        left: -3rem;
+        @include m.phone_360 {
+            left: -8rem;
+            width: 79rem;
+        }
+        @include m.phone_375 {
+            width: 79rem;
+        }
+        @include m.phone_390 {
+            width: 74rem;
+        }
+        @include m.phone_400 {
+            width: 80rem;
+        }
+        @include m.phone_420 {
+            width: 83rem;
+        }
+        @include m.phone_428 {
+            width: 102rem;
+            left: -13rem;
+        }
+    }
+    .bloque1LeftCayetanoTano {
+        position: absolute;
+        height: 20rem;
+        width: auto;
+        bottom: 0;
+        right: 0;
+        @include m.phone_360 {
+            height: 35rem;
+            right: -3rem;
+        }
+        @include m.phone_428 {
+            height: 42rem;
+            right: -7rem;
+        }
+    }
+    // width: 100%;
+}
+
+.bloque1LeftLogo {
+    // background-color: green;
+    width: 20rem;
+    height: 5rem;
+    position: relative;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    .bloque1LeftLogoImage {
+        position: relative;
+        width: auto;
+        height: 4rem;
+        // bottom: 0;
+        // left: 0;
+    }
+}
+
+.bloque1LeftTitle {
+    // background-color: purple;
+    width: 100%;
+    row-gap: .5rem;
+    h3, h4, h5 {
+        margin: 0;
+        font-size: 3.5rem;
+        font-weight: 400;
+        color: black;
+    }
+    h4 {
+        margin-left: 5.5rem;
+    }
+    h5 {
+        position: relative;
+        z-index: 10;
+        margin-left: 2rem;
+    }
+}
