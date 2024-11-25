@@ -4,174 +4,21 @@
     background-color: $color;
 }
 
-//HEIGHT MEDIAQUERIES
-@mixin height_600 {
-    @media (min-height: v.$height_600){
+@mixin desktop1020and($altura) {
+    @media (min-width: 1020px) and (min-height: $altura) {
         @content;
     }
 }
 
-@mixin height_620 {
-    @media (min-height: v.$height_620){
+@mixin desktop1460and($altura) {
+    @media (min-width: 1020px) and (min-height: $altura) {
         @content;
     }
 }
 
-@mixin height_640 {
-    @media (min-height: v.$height_640){
-        @content;
-    }
-}
-
-@mixin height_660 {
-    @media (min-height: v.$height_660){
-        @content;
-    }
-}
-
-@mixin height_680 {
-    @media (min-height: v.$height_680){
-        @content;
-    }
-}
-
-@mixin height_700 {
-    @media (min-height: v.$height_700){
-        @content;
-    }
-}
-
-@mixin height_719 {
-    @media (min-height: v.$height_719){
-        @content;
-    }
-}
-
-@mixin height_720 {
-    @media (min-height: v.$height_720){
-        @content;
-    }
-}
-
-@mixin height_740 {
-    @media (min-height: v.$height_740){
-        @content;
-    }
-}
-
-@mixin height_760 {
-    @media (min-height: v.$height_760){
-        @content;
-    }
-}
-
-@mixin height_775 {
-    @media (min-height: v.$height_775){
-        @content;
-    }
-}
-
-@mixin height_780 {
-    @media (min-height: v.$height_780){
-        @content;
-    }
-}
-
-@mixin height_800 {
-    @media (min-height: v.$height_800){
-        @content;
-    }
-}
-
-@mixin height_820 {
-    @media (min-height: v.$height_820){
-        @content;
-    }
-}
-
-@mixin height_840 {
-    @media (min-height: v.$height_840){
-        @content;
-    }
-}
-
-@mixin height_860 {
-    @media (min-height: v.$height_860){
-        @content;
-    }
-}
-
-@mixin height_880 {
-    @media (min-height: v.$height_880){
-        @content;
-    }
-}
-
-@mixin height_900 {
-    @media (min-height: v.$height_900){
-        @content;
-    }
-}
-
-@mixin height_920 {
-    @media (min-height: v.$height_920){
-        @content;
-    }
-}
-
-@mixin height_940 {
-    @media (min-height: v.$height_940){
-        @content;
-    }
-}
-
-@mixin height_960 {
-    @media (min-height: v.$height_960){
-        @content;
-    }
-}
-
-@mixin height_980 {
-    @media (min-height: v.$height_980){
-        @content;
-    }
-}
-
-@mixin height_1000 {
-    @media (min-height: v.$height_1000){
-        @content;
-    }
-}
-
-@mixin height_1020 {
-    @media (min-height: v.$height_1020){
-        @content;
-    }
-}
-
-@mixin height_1040 {
-    @media (min-height: v.$height_1040){
-        @content;
-    }
-}
-
-@mixin height_1060 {
-    @media (min-height: v.$height_1060){
-        @content;
-    }
-}
-
-@mixin height_1080 {
-    @media (min-height: v.$height_1080){
-        @content;
-    }
-}
-
-@mixin height_1300 {
-    @media (min-height: v.$height_1300){
-        @content;
-    }
-}
+// @mixin padding1020_left {
+//     padding-left: 5rem;
+// }
 
 //HEIGHT MEDIAQUERIA FIN
 @mixin phone_300 {
@@ -222,8 +69,8 @@
     }
 }
 
-@mixin phone_414 {
-    @media (min-width: v.$phone_414) {
+@mixin phone_410 {
+    @media (min-width: v.$phone_410) {
         @content;
     }
 }

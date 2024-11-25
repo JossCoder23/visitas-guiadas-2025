@@ -5,10 +5,16 @@
     display: flex;
     justify-content: center;
     background-color: v.$color1;
+    @include m.desktop_1020 {
+        padding: 6rem 0;
+    }
 }
 
 .bloque3Container {
     width: v.$width_mobile;
+    @include m.desktop_1020 {
+        width: v.$width_tablet;
+    }
 }
 
 .bloque3Left {
@@ -19,6 +25,9 @@
     justify-content: center;
     position: relative;
     // overflow: hidden;
+    @include m.desktop_1020 {
+        display: none;
+    }
     h4 {
         display: none;
         @include m.desktop_1020 {
@@ -63,6 +72,23 @@
     }
 }
 
+.bloque3LeftDesktop {
+    display: none;
+    @include m.desktop1020and(0px) {
+        display: flex !important;
+        justify-content: flex-start;
+        z-index: 6;
+        input {
+            height: 2.3rem !important;
+        }
+    }
+    @include m.desktop_1200 {
+        input {
+            height: 3.2rem !important;
+        }
+    }
+}
+
 .bloque1Form {
     background-color: white;
     width: 28rem;
@@ -76,6 +102,12 @@
     // display: none;
     @include m.phone_390 {
         width: 32rem;
+    }
+    @include m.desktop_1020 {
+        border-radius: 2.5rem;
+    }
+    @include m.desktop_1200 {
+        width: 36rem;
     }
     @include m.desktop_1400 {
         width: 36rem;
@@ -213,6 +245,7 @@
     display: flex;
     flex-direction: column;
     row-gap: 2rem;
+    background-color: purple;
 }
 
 .bloque3RightTitle {
@@ -226,11 +259,22 @@
         text-align: center;
         // padding: 0 1rem;
     }
-    h2 {
+    .bloque3RightTitleMobile {
         font-size: 2.3rem;
         font-weight: 500;
+        @include m.desktop_1020 {
+            display: none;
+        }
         span {
             font-weight: 700;
+        }
+    }
+    .bloque3RightTitleDesktop {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+            font-weight: 500;
+            font-size: 3rem;
         }
     }
     p {
@@ -241,10 +285,19 @@
 .bloque3RightGrid {
     // background-color: green;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 27rem 8rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto;
+    // margin-top: 2rem;
     position: relative;
+    img, h3, h2 {
+        // height: 8rem;
+        margin: 0;
+        min-height: 7rem;
+        background-color: red;
+    }
+    img {
+        width: 3rem;
+    }
 }
 
 .bloque3RightGridImage1 {

@@ -26,29 +26,58 @@ html(lang="es")
         link(href='https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' rel='stylesheet')
     body
         .bloque1
-            .bloque1Container
-                .bloque1Left
-                    img.bloque1LeftCayetano(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-cayetano-mobile-top-scaled.webp", alt="")
-                    img.bloque1LeftCayetanoTano(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-tano-feliz.webp", alt="")
-                    .bloque1LeftLogo
-                        img.bloque1LeftLogoImage(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/beca18evento-logo-scaled.webp", alt="")
-                    .bloque1LeftTitle
-                        h3 Explora la
-                        h4 Cayetano
-                        h5 de cerca
-                .bloque1Right
-        .bloque2
-            .bloque2Container
-                img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visitas-guiadas-arrow.webp", alt="")
-                h3 Agenda tu 
-                    span visita guiada 
-                    | ahora
+            .bloque1Grid
+                img.bloque1LeftCayetanoTano(src="img/tano3d.webp", alt="")
+                .bloque1Container
+                    .bloque1Left
+                        img.bloque1LeftCayetanoMobile(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-cayetano-mobile-top-scaled.webp", alt="")
+                        img.bloque1LeftCayetanoDesktop(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-cayetano-scaled.webp", alt="")
+                        .bloque1LeftLogo
+                            img.bloque1LeftLogoImage(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/beca18evento-logo-scaled.webp", alt="")
+                        .bloque1LeftTitle
+                            h3 Explora la
+                            h4 Cayetano
+                            h5 de cerca
+                    .bloque1Right
+                        img.bloque1RightImage1(src="img/desktop-shield-top.webp", alt="")
+                        .bloque3Left.bloque3LeftDesktop
+                            //- img.bloque1FormContentMobile1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-1.webp", alt="")
+                            //- img.bloque1FormContentMobile2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-2.webp", alt="")
+                            //- h4 ¡Cerramos Inscripciones!
+                            .bloque1Form
+                                .bloque1FormTitle
+                                    h3 Agenda tu visita y 
+                                        span vive la experiencia Cayetano
+                                input(type="text" placeholder="Nombres*")
+                                input(type="text" placeholder="Apellidos*")
+                                input(type="text" placeholder="Tipo de documento*")
+                                input.inputNumber(type="number" placeholder="Número de documento*" inputmode="numeric")
+                                input(type="text" placeholder="Celular*")
+                                input(type="text" placeholder="Correo electrónico*")
+                                input(type="text" placeholder="Seleccionar horario de visita*")
+                                input(type="text" placeholder="Seleccionar carrera*")
+                                input(type="text" placeholder="¿Qué grado estás cursando en el colegio?*")
+                                .bloque1TopFormContainer--terminos
+                                    input(type="checkbox", name="")
+                                    h3 Política de privacidad y términos de servicio.
+                                .captcha
+                                    #recap3503766000237491098.g-recaptcha(data-sitekey='6LdqkDoiAAAAALdLtgIzFUQelkS9jGZU4W7gjLHG' data-theme='light' data-callback='rccallback3503766000237491098' captcha-verified='false')
+                                    #recapErr3503766000237491098(style='font-size:12px;color:red;visibility:hidden;') Error en validación de Captcha. Si no es un robot, inténtelo de nuevo.
+                                .bloque1FormButton
+                                    button
+                                        h3 Quiero más información
+                .bloque2
+                    .bloque2Container
+                        img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visitas-guiadas-arrow.webp", alt="")
+                        h3 Agenda tu 
+                            span visita guiada 
+                            | ahora
         .bloque3
             .bloque3Container
                 .bloque3Left
                     //- img.bloque1FormContentMobile1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-1.webp", alt="")
                     //- img.bloque1FormContentMobile2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/shield-mobile-2.webp", alt="")
-                    h4 ¡Cerramos Inscripciones!
+                    //- h4 ¡Cerramos Inscripciones!
                     .bloque1Form
                         .bloque1FormTitle
                             h3 Agenda tu visita y 
@@ -73,24 +102,25 @@ html(lang="es")
                                 h3 Quiero más información
                 .bloque3Right
                     .bloque3RightTitle
-                        h2 Sé parte de la 
+                        h2.bloque3RightTitleMobile Sé parte de la 
                             span universidad 
                                 br
                                 | N.° 1 del Perú
+                        h2.bloque3RightTitleDesktop Sé parte de la 
+                            br
+                            span universidad N.° 1 del Perú
                         p Si estás en 5.º de secundaria o terminaste el colegio, ven y vive la experiencia Cayetano con tu familia o amigos.
                     .bloque3RightGrid
                         img.bloque3RightGridImage1(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-icon-shield.webp", alt="")
                         img.bloque3RightGridImage2(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-icon-award.webp", alt="")
-                        .bloque3RightGridLeft
-                            h3 Fecha
-                            h3 Horarios
-                            img(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/prueba1.webp", alt="")
-                            h3 Lugar
-                        .bloque3RightGridRight
-                            h2 Sábados
-                            h2 10:00 a. m.
-                            h2 12:00 p. m.
-                            h2 Campus Central
+                        h3.bloque3Item1 Fecha
+                        h3.bloque3Item2 Sábados
+                        img.bloque3Item3(src="https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/prueba1.webp", alt="")
+                        h3.bloque3Item4 Lugar
+                        h3.bloque3Item5 Sábados
+                        h3 10:00 a. m.
+                        h3 12:00 p. m.
+                        h3 Campus Central
                         .bloque3RightGridBottom
                             h4 Av. Honorio Delgado 430.
                             h4 San Martín de Porres.
@@ -102,5 +132,5 @@ html(lang="es")
         //-             | Av. Honorio Delgado 430
         //-             br
         //-             | Urb. Ingeniería, San Martín de Porres
-        script(src="./js/script.js" async)
+        //- script(src="./js/script.js" async)
         script(src="https://unpkg.com/swiper/swiper-bundle.min.js")

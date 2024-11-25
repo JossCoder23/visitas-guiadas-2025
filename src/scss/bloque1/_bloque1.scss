@@ -2,32 +2,110 @@
 @use 'base/mixins' as m;
 
 .bloque1 {
-    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-desktop-top.webp');
-    background-size: cover;
-    background-position: left;
-    background-repeat: none;
+    // background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/visita-guiada-desktop-top.webp');
+    // background-size: cover;
+    // background-position: left;
+    // background-repeat: none;
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    height: 100vh;
+    // justify-content: center;
+    // align-items: flex-end;
+    height: auto;
     width: 100%;
-    overflow: hidden;
+    // overflow: hidden;
     // padding: 0 8rem;
+    // flex-direction: column;
 }
 
+.bloque1Grid {
+    display: flex;
+    flex-direction: column;
+    // width: v.$width_mobile;
+    justify-content: center;
+    background-color: green;
+    width: 100%;
+    position: relative;
+}
  
+.bloque1LeftCayetanoTano {
+    position: absolute;
+    height: 25rem;
+    width: auto;
+    bottom: 4rem;
+    right: 0;
+    z-index: 100;
+    @include m.phone_360 {
+        height: 35rem;
+        right: 0rem;
+    }
+    @include m.phone_428 {
+        height: 42rem;
+        right: -7rem;
+    }
+    @include m.tablet_768 {
+        right: 0;
+    }
+    @include m.desktop_1020 {
+        right: 37%; 
+        height: 31rem;   
+    }
+    @include m.desktop_1200 {
+        height: 40rem;
+        right: 36%;
+    }
+    @include m.desktop_1360 {
+        right: 31%;
+    }
+    @include m.desktop_1460 {
+        right: 28%;
+    }
+    @include m.desktop_1920 {
+        height: 69rem;
+        right: 23%;
+        transform-origin: 50% 50%;
+        transform: rotateY(25deg);
+    }
+    
+}
 
 .bloque1Container {
-    // background-color: rgba(255, 0, 0, 0.305);
+    background-color: rgba(255, 0, 0, 0.305);
     z-index: 30;
     position: relative;
     display: flex;
-    height: 42rem;
-    width: v.$width_mobile;
-    
+    height: 100vh;
+    background-image: url('../img/fondo-real.webp');
+    background-size: cover;
+    background-position: left;
+    background-repeat: none;
+    // overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    .bloque1Left, 
+    .bloque1Right {
+        width: v.$width_mobile;
+        @include m.desktop_1020 {
+            width: 100%;
+            position: relative;
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        .bloque1RightImage1 {
+            display: none;
+            @include m.desktop_1020 {
+                display: block;
+                position: absolute;
+                top: 0;
+                height: 110%;
+                width: 100%;
+                z-index: 6;
+            }
+        } 
+    }
     @include m.phone_360 {
         height: 67rem;
-        background-color: purple;
+        // background-color: purple;
     }
     @include m.phone_375 {
         height: 71rem;
@@ -35,19 +113,37 @@
     }
     @include m.phone_390 {
         height: 75rem;
-        background-color: yellow;
+        // background-color: yellow;
     }
     @include m.phone_400 {
         height: 68rem;
-        background-color: green;
+        // background-color: green;
     }
     @include m.phone_420 {
         height: 70rem;   
-        background-color: gray; 
+        // background-color: gray; 
     }
     @include m.phone_428 {
         height: 84rem;
-        background-color: black;
+        // background-color: black;
+    }
+    // @media (min-width: 1020px) and (min-height: 560px) {
+    //     background-color: orange;
+    // }
+    
+    @include m.desktop1020and(0px) {
+        display: grid;
+        grid-template-columns: 1.6fr 1fr;
+        height: 100vh;
+    }
+    @include m.desktop_1360 {
+        grid-template-columns: 2fr 1fr;
+    }
+    @include m.desktop_1460 {
+        grid-template-columns: 2.3fr 1fr;   
+    }
+    @include m.desktop_1920 {
+        grid-template-columns: 3fr 1fr;  
     }
 }
 
@@ -59,60 +155,99 @@
     width: 100%;
     align-items: center;
     flex-direction: column;
-    row-gap: 1.5rem;
+    row-gap: 1rem;
+    // overflow: hidden;
+    padding-top: 1rem;
+ 
     @include m.phone_360 {
         row-gap: 2.5rem;
-        @media (max-height: 780px) {
-            row-gap: 3.5rem;
-            // background-color: red;
-        } 
-        @media (max-height: 800px) {
-            // row-gap: 5rem;
-            // background-color: green;
-        } 
+        padding-top: 3rem;
     }
-    .bloque1LeftCayetano {
+    @include m.phone_390 {
+        row-gap: 3.5rem;
+    }
+    @include m.desktop_1020 {
+        // background-color: red;
+        width: 100% !important;
+        position: relative;
+        height: 100%;
+        row-gap: 6.5rem;
+    }
+    @include m.desktop1020and(700px) {
+        row-gap: 7.5rem;
+        padding-top: 6rem;
+    }
+    @include m.desktop_1200 {
+        padding-top: 4rem;
+        row-gap: 5.5rem;
+    }
+    .bloque1LeftCayetanoMobile {
         position: absolute;
-        bottom: -10rem;
-        width: 50rem;
+        bottom: 0;
+        width: 46rem;
         left: -3rem;
         @include m.phone_360 {
             left: -8rem;
-            width: 79rem;
+            width: 73rem;
+            height: 54rem;
         }
         @include m.phone_375 {
             width: 79rem;
+            height: 59rem;
         }
         @include m.phone_390 {
-            width: 74rem;
+            width: 75rem;
+            height: 63rem;
         }
-        @include m.phone_400 {
-            width: 80rem;
-        }
-        @include m.phone_420 {
-            width: 83rem;
+        @include m.phone_410 {
+            width: 71rem;
+            height: 57rem;
         }
         @include m.phone_428 {
-            width: 102rem;
-            left: -13rem;
+            width: 93rem;
+            height: 69rem;
+        }
+        @include m.tablet_768 {
+            width: 120rem;
+            height: 80rem;
+        }
+        @include m.desktop_1020 {
+            display: none;
+            
         }
     }
-    .bloque1LeftCayetanoTano {
-        position: absolute;
-        height: 20rem;
-        width: auto;
-        bottom: 0;
-        right: 0;
-        @include m.phone_360 {
-            height: 35rem;
-            right: -3rem;
-        }
-        @include m.phone_428 {
+    .bloque1LeftCayetanoDesktop {
+        display: none;
+        @include m.desktop_1020 {
+            display: block;
+            width: 134%;
             height: 42rem;
-            right: -7rem;
+            bottom: -3rem;
+            left: 0;
+            position: absolute;
+            z-index: 5;
+        }
+        @include m.desktop_1200 {
+            width: 142%;
+            height: 52rem;
+        }
+        @include m.desktop_1360 {
+            width: 140%;
+            height: 51rem;
+        }
+        @include m.desktop_1460 {
+            width: 126%;
+            height: 47rem;
+        }
+        @include m.desktop1460and(860px) {
+            height: 53rem;
+        }
+        @include m.desktop_1920 {
+            height: 86rem;    
+            width: 130%;
+            bottom: -5rem;
         }
     }
-    // width: 100%;
 }
 
 .bloque1LeftLogo {
@@ -123,31 +258,80 @@
     z-index: 5;
     display: flex;
     justify-content: center;
+    @include m.desktop_1020 {
+        width: 100%;
+        justify-content: flex-start;
+        padding-left: v.$padding1020left;
+    }
+    @include m.desktop_1920 {
+        padding-left: 17rem;
+    }
     .bloque1LeftLogoImage {
         position: relative;
         width: auto;
         height: 4rem;
-        // bottom: 0;
-        // left: 0;
+        @include m.phone_390 {
+            height: 5rem;
+        }
+        @include m.phone_400 {
+            height: 5.5rem;
+        }
+        @include m.desktop_1020 {
+            height: 6.5rem;
+        }
+        @include m.desktop_1920 {
+            height: 7.5rem;
+        }
     }
 }
 
-.bloque1LeftTitle {
+.bloque1LeftTitle { 
     // background-color: purple;
     width: 100%;
     row-gap: .5rem;
+    @include m.desktop_1020 {
+        padding-left: v.$padding1020left;
+    }
+    @include m.desktop_1920 {
+        padding-left: 17rem;
+    }
     h3, h4, h5 {
         margin: 0;
         font-size: 3.5rem;
         font-weight: 400;
         color: black;
+        @include m.desktop_1020 {
+            font-size: 7.5rem;
+            font-weight: 450;
+            letter-spacing: -2px;
+        }
+        @include m.desktop_1200 {
+            font-size: 10rem;
+        }
+        @include m.desktop_1460 {
+            font-size: 12rem;
+        }
+        @include m.desktop_1920 {
+            font-size: 13.5rem;
+        }
     }
     h4 {
         margin-left: 5.5rem;
+        position: relative;
+        z-index: 12;
+        @include m.phone_360 {
+            z-index: 0;
+        }
+        @include m.desktop_1020 {
+            padding-left: 6.5rem;
+        }
     }
     h5 {
         position: relative;
         z-index: 10;
         margin-left: 2rem;
+        @include m.desktop_1020 {
+            margin-left: 6rem;
+        }
     }
 }
