@@ -11,7 +11,13 @@
 }
 
 @mixin desktop1460and($altura) {
-    @media (min-width: 1020px) and (min-height: $altura) {
+    @media (min-width: 1460px) and (min-height: $altura) {
+        @content;
+    }
+}
+
+@mixin desktop1920and($altura) {
+    @media (min-width: 1920px) and (min-height: $altura) {
         @content;
     }
 }

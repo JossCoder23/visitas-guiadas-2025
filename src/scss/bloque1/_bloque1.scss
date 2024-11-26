@@ -28,17 +28,17 @@
  
 .bloque1LeftCayetanoTano {
     position: absolute;
-    height: 25rem;
+    height: 25rem !important;
     width: auto;
     bottom: 4rem;
     right: 0;
     z-index: 100;
     @include m.phone_360 {
-        height: 35rem;
+        height: 35rem !important;
         right: 0rem;
     }
     @include m.phone_428 {
-        height: 42rem;
+        height: 42rem !important;
         right: -7rem;
     }
     @include m.tablet_768 {
@@ -46,10 +46,10 @@
     }
     @include m.desktop_1020 {
         right: 37%; 
-        height: 31rem;   
+        height: 31rem !important;   
     }
     @include m.desktop_1200 {
-        height: 40rem;
+        height: 40rem !important;
         right: 36%;
     }
     @include m.desktop_1360 {
@@ -59,12 +59,14 @@
         right: 28%;
     }
     @include m.desktop_1920 {
-        height: 69rem;
+        height: 69rem !important;
         right: 23%;
         transform-origin: 50% 50%;
         transform: rotateY(25deg);
     }
-    
+    @include m.desktop1920and(950px) {
+        height: 51rem !important;
+    }
 }
 
 .bloque1Container {
@@ -73,7 +75,7 @@
     position: relative;
     display: flex;
     height: 100vh;
-    background-image: url('../img/fondo-real.webp');
+    background-image: url('https://lp.cayetano.edu.pe/wp-content/uploads/2024/11/fondo-real.webp');
     background-size: cover;
     background-position: left;
     background-repeat: none;
@@ -246,6 +248,10 @@
             height: 86rem;    
             width: 130%;
             bottom: -5rem;
+        }
+        @include m.desktop1920and(950px) {
+            height: 63rem;
+            width: 124%;
         }
     }
 }
